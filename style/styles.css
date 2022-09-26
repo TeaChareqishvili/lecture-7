@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+section{
+    width:100%;
+    position:relative;
+}
+
+.about{
+    width:25%;
+    height:150px; 
+    display:inline-block;
+    
+
+}
+.emcar{
+    width:25%;
+    height:200px;
+    display:none;
+}
+
+p:hover+div{
+ display:inline-block
+}
+.emergency{ 
+    background-image: url(../image/112.png);
+    background-size:cover;
+
+}
+p{
+    display:inline-block;
+    font-size:30px;
+    font-weight:bold;
+    color:red;
+}
+
+.greycar{
+    position:absolute; 
+    margin-top:400px;
+    margin-left:15px;
+  background-image: url(../image/greycar.png);
+  background-size: cover;
+  animation-name:moveRight;
+  animation-duration: 5s;
+  animation-delay:1s;
+  animation-direction:normal;
+  animation-iteration-count: infinite;
+ 
+}
+
+.whitecar{
+    position:absolute;
+    margin-top:20px;
+    margin-left:70%;
+    background-image:url(../image/whitecar.png);
+    background-size:cover;
+    
+   animation-name:moveBack;
+    animation-duration: 5s;
+    animation-delay:1s;
+    animation-direction:normal;
+    animation-iteration-count:infinite;
+    
+    
+
+}
+
+
+@keyframes moveRight{
+    from {
+        left:0%;
+    }
+    to{
+        left:500px;
+    }
+}
+
+@keyframes moveBack{
+    0%{
+         top:0;
+        right:0;
+    }
+    50%{
+        top:400px;
+        right:0;
+    }
+   100%{
+       top:400px;
+       right:300px;
+   }
+   
+   
+}
+
+
+
+
