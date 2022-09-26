@@ -3,10 +3,16 @@
     padding:0;
     box-sizing:border-box;
 }
+body{
+   background-color:aliceblue;
+    
+    
+}
 
 section{
     width:100%;
     position:relative;
+   
 }
 
 .about{
@@ -23,18 +29,28 @@ section{
 }
 
 p:hover+div{
- display:inline-block
+ display:inline-block;
+ margin-top:150px;
+ 
 }
 .emergency{ 
+    position:absolute;
+   
     background-image: url(../image/112.png);
     background-size:cover;
+    animation:moveQuick;
+    animation-duration:4s;
+    animation-delay: 1s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
 
 }
 p{
-    display:inline-block;
+    font-family:Noto Sans Mono;
     font-size:30px;
     font-weight:bold;
     color:red;
+    
 }
 
 .greycar{
@@ -47,7 +63,7 @@ p{
   animation-duration: 5s;
   animation-delay:1s;
   animation-direction:normal;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
  
 }
 
@@ -58,11 +74,11 @@ p{
     background-image:url(../image/whitecar.png);
     background-size:cover;
     
-   animation-name:moveBack;
+   animation-name:moveDown;
     animation-duration: 5s;
     animation-delay:1s;
     animation-direction:normal;
-    animation-iteration-count:infinite;
+    animation-iteration-count:1;
     
     
 
@@ -74,11 +90,11 @@ p{
         left:0%;
     }
     to{
-        left:500px;
+        left:450px;
     }
 }
 
-@keyframes moveBack{
+@keyframes moveDown{
     0%{
          top:0;
         right:0;
@@ -93,6 +109,16 @@ p{
    }
    
    
+}
+
+@keyframes moveQuick{
+  from{
+    left:0%;
+  }
+
+  to{
+    left:40%;
+  }
 }
 
 
